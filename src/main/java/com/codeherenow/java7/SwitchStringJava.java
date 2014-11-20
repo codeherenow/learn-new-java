@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.codeherenow.switchstring;
+package com.codeherenow.java7;
 
 /**
  * This source file demonstrates the use of if.. else.. blocks to make string comparisons in older
@@ -22,7 +22,7 @@ package com.codeherenow.switchstring;
  *
  * @author Ragunath Jawahar <www.codeherenow.com>
  */
-public class Java {
+public class SwitchStringJava {
 
     public static void main(String[] args) {
         String timerState = "READY";

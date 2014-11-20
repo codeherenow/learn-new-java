@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.codeherenow.switchstring;
+package com.codeherenow.java7;
 
 /**
  * Java 7 allows the use of {@link java.lang.String} within switch statements. Here is a sample program
@@ -22,7 +22,7 @@ package com.codeherenow.switchstring;
  *
  * @author Ragunath Jawahar <www.codeherenow.com>
  */
-public class Java7 {
+public class SwitchStringJava7 {
 
     public static void main(String[] args) {
         String timerState = "READY";
