@@ -5,18 +5,32 @@ import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Java 7 allows underscores between numeric types. Makes numbers go easy on the eye
- * and brain. Underscores (_) can ONLY be placed between digits or their representations (Hex, Octal or Binary).
- *
  * @author Ragunath Jawahar <www.codeherenow.com>
  */
-public class UnderscoresNumericLiteralsJava7 {
+public class UnderscoresInNumericLiterals {
 
     public static void main(String[] args) {
+
+        /*
+         * Java 7 allows underscores between numeric types. Makes numbers
+         * go easy on the eye and brain. Underscores (_) can ONLY be placed
+         * between digits or their representations (Hex, Octal or Binary).
+         */
         int someNumber = 10_000_000;
         long millis = 72_000_000L;
         double gatesNetWorthBtc = 229_717_735.24761; // 1 BTC = 362.02 USD (When I made this)
         int green = 0x00_FF_00;
+
+        /*
+         * Underscores are illegal inside numeric types before Java 7.
+         * The numbers in the code appear long and verbose.
+         */
+        /*
+        int someNumber = 10000000;
+        long millis = 72000000L;
+        double gatesNetWorthBtc = 229717735.24761; // 1 BTC = 362.02 USD (When I made this)
+        int green = 0x00FF00;
+        */
 
         printInItalianFormat(someNumber);
         printInHours(millis);
