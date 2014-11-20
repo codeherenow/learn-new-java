@@ -17,16 +17,37 @@
 package com.codeherenow.java7;
 
 /**
- * This source file demonstrates the use of if.. else.. blocks to make string comparisons in older
- * version of Java (up to 1.6).
- *
  * @author Ragunath Jawahar <www.codeherenow.com>
  */
-public class SwitchStringJava {
+public class StringInSwitch {
 
     public static void main(String[] args) {
         String timerState = "READY";
 
+        /*
+         * Java 7 allows the use of {@link java.lang.String} within
+         * switch statements. Here is an example that shows how to do it.
+         *
+         * PRO TIP: Switch statements on 'String' types are more performant
+         * than their 'if.. then.. else..' counterparts.
+         */
+        switch (timerState.toUpperCase()) {
+            case "READY":   doReady();      break;
+            case "RUNNING": doRunning();    break;
+            case "PAUSED":  doPaused();     break;
+            case "RESET":   doReset();      break;
+
+            default:
+                String message = String.format(
+                        "Is it %s? OMG, I haven't heard of that before!", timerState);
+                throw new IllegalStateException(message);
+        }
+
+        /*
+         * The following block demonstrates the use of if.. then.. else.. blocks
+         * to make string comparisons in older version of Java (up to 1.6).
+         */
+        /*
         if ("READY".equals(timerState)) {
             doReady();
         } else if ("RUNNING".equals(timerState)) {
@@ -40,6 +61,7 @@ public class SwitchStringJava {
                     "Is it %s? OMG, I haven't heard of that before!", timerState);
             throw new IllegalStateException(message);
         }
+        */
     }
 
     private static void doReady() {
