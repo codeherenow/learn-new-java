@@ -32,8 +32,7 @@ public class DiamondOperator {
          * instantiate an object.
          */
         List<String> names = new ArrayList<>();
-        Map<String, ? extends Map<Long, Class<?>>> complexMap =
-                new HashMap<>();
+        Map<String, ? extends Map<Long, Class<?>>> complexMap = new HashMap<>();
 
         /*
          * Up to Java 6, generics were verbose. They required redundant
