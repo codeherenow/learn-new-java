@@ -44,7 +44,7 @@ public class StringInSwitch {
         }
 
         /*
-         * The following block demonstrates the use of if.. then.. else.. blocks
+         * The following block demonstrates the use of 'if.. then.. else..' blocks
          * to make string comparisons in older version of Java (up to 1.6).
          */
         /*
