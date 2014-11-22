@@ -17,6 +17,9 @@
 package com.codeherenow.java8.streams.file;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 /**
  * @author Ragunath Jawahar <www.codeherenow.com>
@@ -24,10 +27,9 @@ import java.io.*;
 public class ReadFileJava7 {
 
     public static void main(String[] args) {
-        File file = new File("files/streams-read-file.txt");
+        Path path = Paths.get("files", "streams-read-file.txt");
 
-        try (BufferedReader bufferedReader =
-                     new BufferedReader(new FileReader(file))) {
+        try (BufferedReader bufferedReader = Files.newBufferedReader(path)) {
 
             // Read file contents
             StringBuilder stringBuilder = new StringBuilder();
@@ -38,8 +40,6 @@ public class ReadFileJava7 {
 
             // Print file contents
             System.out.println(stringBuilder);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }

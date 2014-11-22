@@ -27,11 +27,12 @@ import java.nio.file.Paths;
 public class ReadFileJava8 {
 
     public static void main(String[] args) {
+        Path path = Paths.get("files", "streams-read-file.txt");
+
         try {
             StringBuilder stringBuilder = new StringBuilder();
 
             // Read file contents
-            Path path = Paths.get("files", "streams-read-file.txt");
             Files.lines(path).forEach(line -> stringBuilder.append(line).append("\n"));
 
             // Print file contents
