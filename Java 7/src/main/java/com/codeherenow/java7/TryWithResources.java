@@ -41,8 +41,7 @@ public class TryWithResources {
             StringBuilder stringBuilder = new StringBuilder();
             String line;
             while ((line = bufferedReader.readLine()) != null) {
-                stringBuilder.append(line);
-                stringBuilder.append("\n");
+                stringBuilder.append(line).append("\n");
             }
 
             // Print the file contents
@@ -67,8 +66,7 @@ public class TryWithResources {
             StringBuilder stringBuilder = new StringBuilder();
             String line;
             while ((line = bufferedReader.readLine()) != null) {
-                stringBuilder.append(line);
-                stringBuilder.append("\n");
+                stringBuilder.append(line).append("\n");
             }
 
             // Print the file contents
