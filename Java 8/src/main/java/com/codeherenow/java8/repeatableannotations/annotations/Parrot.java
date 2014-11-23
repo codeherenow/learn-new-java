@@ -2,10 +2,7 @@ package com.codeherenow.java8.repeatableannotations.annotations;
 
 import com.codeherenow.java8.repeatableannotations.model.Sighting;
 
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+import java.lang.annotation.*;
 
 /**
  * @author Ragunath Jawahar <www.codeherenow.com>
