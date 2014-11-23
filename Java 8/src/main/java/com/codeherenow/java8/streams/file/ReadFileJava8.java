@@ -32,7 +32,7 @@ public class ReadFileJava8 {
         try {
             StringBuilder stringBuilder = new StringBuilder();
 
-            // Read file contents
+            // Get a stream using the lines() method, then go LAMBDA like crazy! Muhahaha... :D
             Files.lines(path).forEach(line -> stringBuilder.append(line).append("\n"));
 
             // Print file contents
