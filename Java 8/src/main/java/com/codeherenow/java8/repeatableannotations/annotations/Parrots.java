@@ -16,20 +16,19 @@
 
 package com.codeherenow.java8.repeatableannotations.annotations;
 
-import com.codeherenow.java8.repeatableannotations.model.Sighting;
-
-import java.lang.annotation.*;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 
 /**
- * To make an annotation repeatable, you need to specify a containing class using the
- * {@link java.lang.annotation.Repeatable} annotation that is available from Java 8. The containing class
- * name is usually (best practice, not mandatory) the pluralized form of the existing annotation.
- *
- * @author Ragunath Jawahar <www.codeherenow.com>
+ * Containing annotations should have a 'value' attribute that is always a single dimensional array
+ * of the {@link java.lang.annotation.Annotation} it is going to contain. Also make sure that the
+ * {@link java.lang.annotation.Target} and {@link java.lang.annotation.Retention} annotations have
+ * the same values as that of its counterpart.
  */
-@Repeatable(Parrots.class)
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Parrot {
-    Sighting alert();
+public @interface Parrots {
+    Parrot[] value();
 }
