@@ -32,10 +32,10 @@ public class ParameterNames {
         Parameter[] parameters = constructor.getParameters();
 
         /*
-         * Normally the Java compiler discards the formal argument names to
+         * Normally, the Java compiler discards the formal argument names to
          * save some memory footprint. If you want to retain that information in your
          * class files you have to compile with the -parameters flag.
-         * (e.g.) 'javac -parameters'
+         * (e.g.) 'javac -parameters ...'
          */
         for (Parameter parameter : parameters) {
             System.out.println(parameter.getName());
