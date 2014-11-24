@@ -29,6 +29,6 @@ public interface BinaryOperation {
     int operate(int a, int b);
 
     default String describe() {
-        return "I'm simple and zen.";
+        return "I'm a binary operation.";
     }
 }

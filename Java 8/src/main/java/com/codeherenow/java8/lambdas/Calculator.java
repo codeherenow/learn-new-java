@@ -1,4 +1,6 @@
-package com.codeherenow.java8.lambdas.functionalinterfaces;
+package com.codeherenow.java8.lambdas;
+
+import com.codeherenow.java8.lambdas.functionalinterfaces.BinaryOperation;
 
 /**
  * @author Ragunath Jawahar <www.codeherenow.com>
