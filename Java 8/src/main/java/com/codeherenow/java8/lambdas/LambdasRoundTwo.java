@@ -2,13 +2,11 @@ package com.codeherenow.java8.lambdas;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 /**
  * @author Ragunath Jawahar <www.codeherenow.com>
  */
-public class SingleArgLambda {
+public class LambdasRoundTwo {
     static final int WIDTH = 400;
     static final int HEIGHT = 80;
 
@@ -24,7 +22,14 @@ public class SingleArgLambda {
         // Add panel to JFrame
         jFrame.add(rootPanel);
 
+        /*
+         * If there is only one method parameter, you can skip the
+         * enclosing parentheses ().
+         */
         // Action listener
+        exitButton.addActionListener(e -> jFrame.dispose());
+
+        /*
         exitButton.addActionListener(new ActionListener() {
 
             @Override
@@ -32,14 +37,24 @@ public class SingleArgLambda {
                 jFrame.dispose();
             }
         });
+        */
 
+        /*
+         * If the functional interface has a no-arg abstract method,
+         * then you have to use a set of empty parentheses ().
+         */
         // Show
+        SwingUtilities.invokeLater(() -> jFrame.setVisible(true));
+
+        /*
         SwingUtilities.invokeLater(new Runnable() {
+
             @Override
             public void run() {
                 jFrame.setVisible(true);
             }
         });
+        */
     }
 
     private static JFrame createJFrame() {
