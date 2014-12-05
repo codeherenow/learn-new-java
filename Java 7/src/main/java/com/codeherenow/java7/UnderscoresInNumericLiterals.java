@@ -51,14 +51,14 @@ public class UnderscoresInNumericLiterals {
         printInItalianFormat(someNumber);
         printInHours(millis);
         printWithTwoDecimals(gatesNetWorthBtc);
-        print(green);
+        printColor(green);
     }
 
-    private static void printInItalianFormat(int tenMillion) {
+    private static void printInItalianFormat(int someNumber) {
         // Decimal int
         String italianFormat = NumberFormat
                 .getNumberInstance(Locale.ITALIAN)
-                .format(tenMillion);
+                .format(someNumber);
         System.out.println(italianFormat);
     }
 
@@ -67,13 +67,11 @@ public class UnderscoresInNumericLiterals {
     }
 
     private static void printWithTwoDecimals(double gatesNetWorthBtc) {
-        // Floating point
         System.out.println(String.format("BTC %.02f", gatesNetWorthBtc));
     }
 
-    private static void print(int twoFiveFive) {
-        // Hex
-        System.out.println(twoFiveFive);
+    private static void printColor(int color) {
+        System.out.println(color);
     }
 
 }
